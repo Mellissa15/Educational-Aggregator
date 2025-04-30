@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educational Podcast Aggregator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #f4f4f4, #e0e0e0);
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            transition: box-shadow 0.3s ease;
+        }
+        .container:hover {
+            box-shadow: 0 0 25px rgba(0,0,0,0.3);
+        }
+        h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p {
+            font-size: 1.1em;
+            color: #666;
+            line-height: 1.6;
+        }
+        .podcast {
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        .podcast img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        .podcast h2 {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #333;
+            margin-top: 0;
+        }
+        .podcast p {
+            font-size: 1em;
+            color: #444;
+            line-height: 1.5;
+        }
+        .podcast a {
+            color: #1a73e8;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .podcast a:hover {
+            text-decoration: underline;
+        }
+        .button-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .button-container button {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            border: 2px solid #1a73e8;
+            border-radius: 4px;
+            background: #1a73e8;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+        .button-container button:hover {
+            background: white;
+            color: #1a73e8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Educational Podcast Aggregator</h1>
+        <p>Welcome to the <strong>Educational Podcast Aggregator</strong>! Here you can find some great podcasts to expand your knowledge. We have curated a list of podcasts that cover a variety of topics. Feel free to explore and <em>learn something new every day</em>.</p>
+        
+        <hr>
+        
+        <div class="podcast">
+            <h2>Learning with Experts</h2>
+            <img src="https://tedxwinterpark.com/wp-content/uploads/2023/04/consejos-sacar-maximo-partido-elearning.jpg" alt="Learning with Experts" width="200">
+            <p>This podcast features interviews with top experts in various fields. <a href="https://www.commonsense.org/education/lists/best-podcast-apps-and-websites-for-students" target="_blank">Listen here</a>.</p>
+            <span>Category: <strong>Education</strong></span>
+        </div>
+        
+        <div class="podcast">
+            <h2>Science Simplified</h2>
+            <img src="https://jnvscienceguru.weebly.com/uploads/1/2/5/2/12524655/cartoon-logo_orig.jpg" alt="Science Simplified" width="200">
+            <p>Exploring complex science topics in simple terms. <a href="https://hellobio.com/blog/our-top-10-science-podcasts.html" target="_blank">Listen here</a>.</p>
+            <span>Category: <strong>Science</strong></span>
+        </div>
+        
+        <div class="podcast">
+            <h2>History Uncovered</h2>
+            <img src="https://www.mooc.org/hubfs/how-study-history-jpg.jpeg" alt="History Uncovered" width="200">
+            <p>In-depth discussions on historical events and figures. <a href="https://www.timeout.com/things-to-do/best-history-podcasts" target="_blank">Listen here</a>.</p>
+            <span>Category: <strong>History</strong></span>
+        </div>
+        
+        <div class="button-container">
+            <button id="subscribe-button">Subscribe to Newsletter</button>
+        </div>
+    </div>
+
+    <script>
+        // Handle button click
+        document.getElementById('subscribe-button').addEventListener('click', function() {
+            let userEmail = prompt('Please enter your email address to subscribe:');
+            if (userEmail) {
+                if (validateEmail(userEmail)) {
+                    alert('Thank you for subscribing!');
+                } else {
+                    alert('Please enter a valid email address.');
+                }
+            } else {
+                alert('Subscription cancelled.');
+            }
+        });
+
+        function validateEmail(email) {
+            // Simple email validation
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(String(email).toLowerCase());
+        }
+    </script>
+</body>
+</html>
